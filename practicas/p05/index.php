@@ -37,5 +37,41 @@ print_r($b);
 echo '<br>';
 
 
+// Paso 1
+$a = "PHP5";
+var_dump($a);
+echo '<br>';
+// Paso 2
+$z[] = &$a;
+var_dump($z[0]);
+echo '<br>';
 
+// Paso 3
+$b = "5a version de PHP";
+var_dump($b);
+echo '<br>';
+
+// Paso 4
+$c = $b * 10;
+var_dump($c);
+echo '<br>';
+
+// Paso 5
+$a .= $b;
+var_dump($a);
+echo '<br>';
+
+// Paso 6
+$b *= $c;
+var_dump($b);
+echo '<br>';
+
+// Paso 7
+$z[0] = "MySQL";
+var_dump($z[0]);
+echo '<br>';
+
+// Mostrar contenido final de $z
+var_dump($z);
+echo '<br>';
 ?>
