@@ -74,4 +74,55 @@ echo '<br>';
 // Mostrar contenido final de $z
 var_dump($z);
 echo '<br>';
+
+//INCISO 4
+
+// Paso 1
+$a = "PHP5";
+$GLOBALS['a'] = $a;  // Asignar al arreglo global para su acceso
+var_dump($GLOBALS['a']);
+echo '<br>';
+
+// Paso 2
+$z[] = &$a;
+$GLOBALS['z'] = $z;  // Asignar al arreglo global para su acceso
+var_dump($GLOBALS['z'][0]);
+echo '<br>';
+
+// Paso 3
+$b = "5a version de PHP";
+$GLOBALS['b'] = $b;  // Asignar al arreglo global para su acceso
+var_dump($GLOBALS['b']);
+echo '<br>';
+
+// Paso 4
+$c = $b * 10;
+$GLOBALS['c'] = $c;  // Asignar al arreglo global para su acceso
+var_dump($GLOBALS['c']);
+echo '<br>';
+
+// Paso 5
+$a .= $b;
+$GLOBALS['a'] = $a;  // Actualizar la variable global
+var_dump($GLOBALS['a']);
+echo '<br>';
+
+// Paso 6
+$b *= $c;
+$GLOBALS['b'] = $b;  // Actualizar la variable global
+var_dump($GLOBALS['b']);
+echo '<br>';
+
+// Paso 7
+$z[0] = "MySQL";
+$GLOBALS['z'] = $z;  // Actualizar la variable global
+var_dump($GLOBALS['z'][0]);
+echo '<br>';
+
+// Mostrar contenido final de $z
+var_dump($GLOBALS['z']);
+'<br>'
+
 ?>
+
+
