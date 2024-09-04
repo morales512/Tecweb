@@ -121,7 +121,23 @@ echo '<br>';
 
 // Mostrar contenido final de $z
 var_dump($GLOBALS['z']);
-'<br>'
+echo '<br>';
+
+//(inciso 5)
+
+$a = "7 personas";
+$b = (integer) $a;
+$a = "9E3";
+$c = (double) $a;
+echo '<br>'.'Inciso 5'.'<br>';
+
+echo $a;
+echo '<br>';
+echo $b;
+echo '<br>';
+echo $c;
+echo '<br>';
+
 
 ?>
 
