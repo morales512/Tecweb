@@ -17,5 +17,25 @@ echo $var7.'<br>';
 echo $_element1.'<br>';
 //echo %$house*5.'<br>';
 
+$a = "ManejadorSQL";
+$b = 'MySQL';
+$c = &$a;
+
+print_r($a);
+echo '<br>';
+print_r($b);
+echo '<br>';
+print_r($c);
+echo '<br>';
+
+$a = "PHP server";
+$b = &$a;
+
+print_r($a);
+echo '<br>';
+print_r($b);
+echo '<br>';
+
+
 
 ?>
