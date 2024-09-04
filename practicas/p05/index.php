@@ -138,6 +138,40 @@ echo '<br>';
 echo $c;
 echo '<br>';
 
+//INCISO 6
+echo '<br>'.'Inciso 6'.'<br>';
+$a = "Tengo sueño";  
+$b = 10.0;   
+$c = 1;            
+$d = "";              
+$e = null;          
+$f = array();         
+
+// Convertir las variables a booleano y mostrar sus valores con var_dump
+echo "Valor booleano de \$a:\n";
+var_dump((bool) $a); 
+echo '<br>';
+
+echo "Valor booleano de \$b:\n";
+var_dump((bool) $b);
+echo '<br>';
+
+echo "Valor booleano de \$c:\n";
+var_dump((bool) $c); 
+echo '<br>';
+
+echo "Valor booleano de \$d:\n";
+var_dump((bool) $d);
+echo '<br>';
+
+echo "Valor booleano de \$e:\n";
+var_dump((bool) $e);
+echo '<br>';
+
+echo "Valor booleano de \$f:\n";
+var_dump((bool) $f);
+echo '<br>';
+
 
 ?>
 
