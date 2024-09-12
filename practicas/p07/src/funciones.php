@@ -51,5 +51,15 @@ function encontrarMultiploDoWhile($numeroDado) {
     return $numeroAleatorio;
 }
 
+function generarArregloAscii() {
+    $arreglo = [];
+
+    // Usar un ciclo for para llenar el arreglo
+    for ($i = 97; $i <= 122; $i++) {
+        $arreglo[$i] = chr($i); // Asignar el carácter ASCII al índice
+    }
+
+    return $arreglo;
+}
 
 ?>
