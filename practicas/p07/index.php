@@ -96,7 +96,35 @@ if (isset($_GET['number1'])) {
     }
     ?>
 
+<h2>Ejercicio 4</h2>
+    <p>Crear un arreglo con índices de 97 a 122 y mostrar las letras correspondientes en una tabla</p>
 
+    <!-- Formulario para generar y mostrar el arreglo -->
+    <form method="post" action="index.php">
+        <input type="submit" name="generar" value="Generar arreglo y mostrar tabla">
+    </form>
+
+    <?php
+    include_once 'C:/xampp/htdocs/tecweb/practicas/p07/src/funciones.php'; // Incluir archivo de funciones
+
+    // Mostrar el arreglo solo si se ha hecho submit
+    if (isset($_POST['generar'])) {
+        // Llamar a la función para generar el arreglo
+        $arreglo = generarArregloAscii();
+
+        // Mostrar el arreglo en una tabla
+        echo "<h3>Tabla de índices y valores ASCII:</h3>";
+        echo "<table border='1'>";
+        echo "<tr><th>Índice</th><th>Valor</th></tr>";
+
+        // Leer el arreglo y mostrar cada índice y valor
+        foreach ($arreglo as $key => $value) {
+            echo "<tr><td>$key</td><td>$value</td></tr>";
+        }
+
+        echo "</table>";
+    }
+    ?>
 
 
 </body>
