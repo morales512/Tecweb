@@ -26,6 +26,38 @@ if (isset($_GET['number1'])) {
     echo "</pre>";
 }
 ?>
+    <h2>Ejercicio 2</h2>
+    <p>Generar secuencia de números aleatorios hasta obtener una secuencia impar, par, impar</p>
+    <form method="post" action="index.php">
+        <input type="submit" name="generar" value="Generar matriz">
+    </form>
+
+    <?php
+    include_once 'C:/xampp/htdocs/tecweb/practicas/p07/src/funciones.php'; // Incluir archivo de funciones
+
+    // Mostrar la matriz solo si se ha hecho un submit
+    if (isset($_POST['generar'])) {
+        // Llamar a la función para generar la secuencia
+        $resultados = generarSecuencia();
+        
+        echo "<h3>Resultados:</h3>";
+        echo "<table border='1'>";
+        echo "<tr><th>Número 1</th><th>Número 2</th><th>Número 3</th></tr>";
+        
+        // Mostrar la matriz de números aleatorios
+        foreach ($resultados['matriz'] as $fila) {
+            echo "<tr>";
+            foreach ($fila as $num) {
+                echo "<td>$num</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+
+        // Mostrar número de iteraciones y total de números generados
+        echo "<p>{$resultados['totalNumeros']} números obtenidos en {$resultados['iteraciones']} iteraciones.</p>";
+    }
+    ?>
 
 
 
