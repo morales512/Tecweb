@@ -13,13 +13,11 @@ function generarSecuencia() {
     $matriz = [];
     $iteraciones = 0;
     $totalNumeros = 0;
-
-    // Continuar generando números hasta encontrar una secuencia impar, par, impar
     do {
         $fila = [];
-        $fila[] = rand(1, 999); // Primer número aleatorio
-        $fila[] = rand(1, 999); // Segundo número aleatorio
-        $fila[] = rand(1, 999); // Tercer número aleatorio
+        $fila[] = rand(1, 999); 
+        $fila[] = rand(1, 999);
+        $fila[] = rand(1, 999); 
 
         $matriz[] = $fila;
         $iteraciones++;
@@ -35,4 +33,23 @@ function generarSecuencia() {
         'totalNumeros' => $totalNumeros
     ];
 }
+
+
+function encontrarMultiploWhile($numeroDado) {
+    $numeroAleatorio = rand(1, 999);
+    while ($numeroAleatorio % $numeroDado !== 0) {
+        $numeroAleatorio = rand(1, 999);
+    }
+    return $numeroAleatorio;
+}
+
+function encontrarMultiploDoWhile($numeroDado) {
+    $numeroAleatorio = 0;
+    do {
+        $numeroAleatorio = rand(1, 999);
+    } while ($numeroAleatorio % $numeroDado !== 0);
+    return $numeroAleatorio;
+}
+
+
 ?>
