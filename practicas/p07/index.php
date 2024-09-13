@@ -126,6 +126,39 @@ if (isset($_GET['number1'])) {
     }
     ?>
 
+<h2>Ejercicio 5</h2>
+    <p>Identificar a una persona de sexo femenino entre 18 y 35 años</p>
+
+    <!-- Formulario para capturar edad y sexo -->
+    <form method="post" action="index.php">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="1" max="100" required>
+        <br>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+        </select>
+        <br>
+
+        <input type="submit" name="verificar" value="Verificar">
+    </form>
+
+    <?php
+    include_once 'C:/xampp/htdocs/tecweb/practicas/p07/src/funciones.php'; // Incluir archivo de funciones
+
+    // Procesar la información solo si se envía el formulario
+    if (isset($_POST['verificar'])) {
+        $edad = $_POST['edad'];
+        $sexo = $_POST['sexo'];
+
+        // Llamar a la función para verificar la edad y el sexo
+        $mensaje = verificarEdadSexo($edad, $sexo);
+        echo "<h3>$mensaje</h3>";
+    }
+    ?>
+
 
 </body>
 </html>
