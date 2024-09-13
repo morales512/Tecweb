@@ -62,4 +62,13 @@ function generarArregloAscii() {
     return $arreglo;
 }
 
+function verificarEdadSexo($edad, $sexo) {
+    // Verificar si es femenina y tiene entre 18 y 35 años
+    if ($sexo === 'femenino' && $edad >= 18 && $edad <= 35) {
+        return "Bienvenida, usted está en el rango de edad permitido.";
+    } else {
+        return "Lo siento, no cumple con los requisitos.";
+    }
+}
+
 ?>
