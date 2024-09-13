@@ -71,4 +71,206 @@ function verificarEdadSexo($edad, $sexo) {
     }
 }
 
+
+function obtenerParqueVehicular() {
+    return [
+        'UBN6338' => [
+            'Auto' => [
+                'marca' => 'HONDA',
+                'modelo' => 2020,
+                'tipo' => 'camioneta',
+            ],
+            'Propietario' => [
+                'nombre' => 'Alfonzo Esparza',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'C.U., Jardines de San Manuel',
+            ],
+        ],
+        'UBN6339' => [
+            'Auto' => [
+                'marca' => 'MAZDA',
+                'modelo' => 2019,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'Ma. del Consuelo Molina',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => '97 oriente, Puebla',
+            ],
+        ],
+        'XYZ1234' => [
+            'Auto' => [
+                'marca' => 'TOYOTA',
+                'modelo' => 2021,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'Carlos López',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Av. Reforma, Puebla',
+            ],
+        ],
+        'ABC5678' => [
+            'Auto' => [
+                'marca' => 'FORD',
+                'modelo' => 2018,
+                'tipo' => 'camioneta',
+            ],
+            'Propietario' => [
+                'nombre' => 'Andrea Martínez',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Av. Vallarta 123, Puebla',
+            ],
+        ],
+        'LMN2345' => [
+            'Auto' => [
+                'marca' => 'NISSAN',
+                'modelo' => 2020,
+                'tipo' => 'hachback',
+            ],
+            'Propietario' => [
+                'nombre' => 'Raúl Sánchez',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Calle Monterrey 567, Puebla',
+            ],
+        ],
+        'DEF8901' => [
+            'Auto' => [
+                'marca' => 'CHEVROLET',
+                'modelo' => 2017,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'Luis Hernández',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Av. Revolución 890, Puebla',
+            ],
+        ],
+        'GHJ5678' => [
+            'Auto' => [
+                'marca' => 'VOLKSWAGEN',
+                'modelo' => 2016,
+                'tipo' => 'camioneta',
+            ],
+            'Propietario' => [
+                'nombre' => 'Jorge Pérez',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Calle Sol 456, Puebla',
+            ],
+        ],
+        'KLM9012' => [
+            'Auto' => [
+                'marca' => 'BMW',
+                'modelo' => 2022,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'María Gutiérrez',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Boulevard 5 de Mayo 789, Puebla',
+            ],
+        ],
+        'NOP3456' => [
+            'Auto' => [
+                'marca' => 'AUDI',
+                'modelo' => 2021,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'Roberto Gómez',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Calle Independencia 345, Puebla',
+            ],
+        ],
+        'RST7890' => [
+            'Auto' => [
+                'marca' => 'KIA',
+                'modelo' => 2020,
+                'tipo' => 'hachback',
+            ],
+            'Propietario' => [
+                'nombre' => 'Lucía Fernández',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Av. Pino Suárez 567, Puebla',
+            ],
+        ],
+        'UVW1234' => [
+            'Auto' => [
+                'marca' => 'TESLA',
+                'modelo' => 2023,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'Pedro Aguilar',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Calle Londres 123, Puebla',
+            ],
+        ],
+        'XYZ5678' => [
+            'Auto' => [
+                'marca' => 'HYUNDAI',
+                'modelo' => 2019,
+                'tipo' => 'camioneta',
+            ],
+            'Propietario' => [
+                'nombre' => 'Carmen Rodríguez',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Calle Juárez 234, Puebla',
+            ],
+        ],
+        'ABC9012' => [
+            'Auto' => [
+                'marca' => 'MERCEDES-BENZ',
+                'modelo' => 2021,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'Rosa Morales',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Av. Carranza 678, Puebla',
+            ],
+        ],
+        'LMN3456' => [
+            'Auto' => [
+                'marca' => 'VOLVO',
+                'modelo' => 2022,
+                'tipo' => 'camioneta',
+            ],
+            'Propietario' => [
+                'nombre' => 'Enrique Delgado',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Calle Ávila Camacho 890, Puebla',
+            ],
+        ],
+        'OPQ6789' => [
+            'Auto' => [
+                'marca' => 'FIAT',
+                'modelo' => 2018,
+                'tipo' => 'sedan',
+            ],
+            'Propietario' => [
+                'nombre' => 'Sofía Ramírez',
+                'ciudad' => 'Puebla, Pue.',
+                'direccion' => 'Calle Zaragoza 567, Puebla',
+            ],
+        ],
+    ];
+}
+
+
+// Función para buscar un vehículo por su matrícula
+function buscarVehiculoPorMatricula($matricula) {
+    $vehiculos = obtenerParqueVehicular();
+    if (isset($vehiculos[$matricula])) {
+        return $vehiculos[$matricula];
+    }
+    return null;
+}
+
+// Función para obtener todos los vehículos
+function obtenerTodosLosVehiculos() {
+    return obtenerParqueVehicular();
+}
+
+
 ?>
