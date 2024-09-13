@@ -159,6 +159,43 @@ if (isset($_GET['number1'])) {
     }
     ?>
 
+<h2>Ejercicio 6: Consulta del parque vehicular</h2>
+    
+    <!-- Formulario para consultar por matrícula -->
+    <form method="post" action="index.php">
+        <label for="matricula">Consultar por matrícula:</label>
+        <input type="text" id="matricula" name="matricula" pattern="[A-Z]{3}[0-9]{4}" placeholder="LLLNNNN" maxlength="7">
+        <br><br>
+        <input type="submit" name="buscar_matricula" value="Buscar matrícula">
+    </form>
+
+    <!-- Formulario para mostrar todos los vehículos -->
+    <form method="post" action="index.php">
+        <input type="submit" name="mostrar_todos" value="Mostrar todos los autos">
+    </form>
+
+    <?php
+    include_once 'C:/xampp/htdocs/tecweb/practicas/p07/src/funciones.php'; // Incluir archivo de funciones
+
+    // Verificar si se envía la solicitud para buscar por matrícula
+    if (isset($_POST['buscar_matricula'])) {
+        $matricula = strtoupper($_POST['matricula']);
+        $vehiculo = buscarVehiculoPorMatricula($matricula);
+        if ($vehiculo) {
+            echo "<h3>Información del vehículo con matrícula $matricula:</h3>";
+            print_r($vehiculo);
+        } else {
+            echo "<h3>No se encontró el vehículo con matrícula $matricula.</h3>";
+        }
+    }
+
+    // Verificar si se solicita mostrar todos los vehículos
+    if (isset($_POST['mostrar_todos'])) {
+        $todos_los_vehiculos = obtenerTodosLosVehiculos();
+        echo "<h3>Todos los vehículos registrados:</h3>";
+        print_r($todos_los_vehiculos);
+    }
+    ?>
 
 </body>
 </html>
