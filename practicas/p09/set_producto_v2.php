@@ -27,7 +27,7 @@ if ($resultado->num_rows > 0) {
     //SE COMENTA
     //$sql_insertar = "INSERT INTO productos VALUES (null, '{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', 0)";
     $sql_insertar = "INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen, eliminado) 
-                    VALUES ('{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', )";
+                    VALUES ('{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}')";
     if ($link->query($sql_insertar)) {
         echo 'Producto insertado con éxito:<br/>';
         echo 'Nombre: ' . $nombre . '<br/>';
