@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Tenis</title>
+    <script>
+        function validarFormulario() {
+            // Validación del nombre
+            var nombre = document.getElementById('nombre').value;
+            if (nombre === "" || nombre.length > 100) {
+                alert("El nombre del producto es requerido y debe tener 100 caracteres o menos.");
+                return false;
+            }
+
+            // Validación de la marca
+            var marca = document.getElementById('marca').value;
+            if (marca === "") {
+                alert("La marca es requerida.");
+                return false;
+            }
+
+            // Validación del modelo
+            var modelo = document.getElementById('modelo').value;
+            var modeloRegex = /^[a-zA-Z0-9]+$/;
+            if (modelo === "" || !modeloRegex.test(modelo) || modelo.length > 25) {
+                alert("El modelo es requerido, debe ser alfanumérico y tener 25 caracteres o menos.");
+                return false;
+            }
+
+            // Validación del precio
+            var precio = parseFloat(document.getElementById('precio').value);
+            if (isNaN(precio) || precio <= 99.99) {
+                alert("El precio es requerido y debe ser mayor a 99.99.");
+                return false;
+            }
+
+            // Validación de los detalles (opcional)
+            var detalles = document.getElementById('detalles').value;
+            if (detalles.length > 250) {
+                alert("Los detalles deben tener 250 caracteres o menos.");
+                return false;
+            }
+
+            // Validación de las unidades
+            var unidades = parseInt(document.getElementById('unidades').value);
+            if (isNaN(unidades) || unidades < 0) {
+                alert("Las unidades son requeridas y deben ser mayor o igual a 0.");
+                return false;
+            }
+
+            // Validación de la imagen (opcional)
+            var imagen = document.getElementById('imagen').value;
+            if (imagen === "") {
+                document.getElementById('imagen').value = "img/imagen.png";  // Ruta por defecto
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Registra unos nuevos tenis</h1>
+    <form action="set_producto_v2.php" method="POST" onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="marca">Marca:</label>
+        <select id="marca" name="marca" required>
+            <option value="">Seleccione una marca</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Converse">Converse</option>
+            <option value="Puma">Puma</option>
+            <option value="Vans">Vans</option>
+            <option value="Under Armour">Under Armour</option>
+            <option value="Skeachers">Skechers</option>
+            <option value="Fila">FILA</option>
+            <option value="Lacoste">Lacoste</option>
+            <option value="New Balance">New Balance</option>
+        </select><br><br>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required><br><br>
+
+        <label for="precio">Precio:</label>
+        <input type="number" step="0.01" id="precio" name="precio" required><br><br>
+
+        <label for="detalles">Detalles:</label>
+        <textarea id="detalles" name="detalles"></textarea><br><br>
+
+        <label for="unidades">Unidades disponibles:</label>
+        <input type="number" id="unidades" name="unidades" required><br><br>
+
+        <label for="imagen">Imagen (ruta):</label>
+        <input type="text" id="imagen" name="imagen"><br><br>
+
+        <input type="submit" value="Registrar Producto">
+    </form>
+</body>
+</html>
