@@ -120,3 +120,47 @@ function init() {
     var JsonString = JSON.stringify(baseJSON,null,2);
     document.getElementById("description").value = JsonString;
 }
+
+function buscarProducto(e) {
+    e.preventDefault();
+    
+    var searchValue = document.getElementById('search').value; // Obtener valor de búsqueda
+
+    var client = getXMLHttpRequest();
+    client.open('POST', './backend/read.php', true);
+    client.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    client.onreadystatechange = function () {
+        if (client.readyState == 4 && client.status == 200) {
+            console.log('[CLIENTE]\n' + client.responseText);
+            
+            // Convierte la respuesta JSON en objeto
+            let productos = JSON.parse(client.responseText);
+            
+            // Limpia el tbody de productos
+            let tbody = document.getElementById("productos");
+            tbody.innerHTML = '';
+
+            // Recorre la lista de productos y crea filas para la tabla
+            productos.forEach(function (producto) {
+                let descripcion = `
+                    <ul>
+                        <li>Precio: ${producto.precio}</li>
+                        <li>Unidades: ${producto.unidades}</li>
+                        <li>Modelo: ${producto.modelo}</li>
+                        <li>Marca: ${producto.marca}</li>
+                        <li>Detalles: ${producto.detalles}</li>
+                    </ul>`;
+
+                let template = `
+                    <tr>
+                        <td>${producto.id}</td>
+                        <td>${producto.nombre}</td>
+                        <td>${descripcion}</td>
+                    </tr>`;
+
+                tbody.innerHTML += template; // Agrega el producto a la tabla
+            });
+        }
+    };
+    client.send("search=" + searchValue); // Enviar término de búsqueda
+}
